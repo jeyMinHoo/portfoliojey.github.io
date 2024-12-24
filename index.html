@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Bung Jeyminhoo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Tambahkan library particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <!-- Partikel background -->
+  <div id="particles-js" class="particles"></div>
+
+  <div class="portfolio-card">
+    <div class="profile-container">
+      <img src="image/profil.jpg" alt="Jeyminhoo" class="profile-picture">
+      <div class="glow-circle"></div>
+    </div>
+    <h1 class="name">
+      <span class="letter" style="--i: 1;">J</span>
+      <span class="letter" style="--i: 2;">E</span>
+      <span class="letter" style="--i: 3;">Y</span>
+      <span class="letter" style="--i: 4;">M</span>
+      <span class="letter" style="--i: 5;">I</span>
+      <span class="letter" style="--i: 6;">N</span>
+      <span class="letter" style="--i: 7;">H</span>
+      <span class="letter" style="--i: 8;">O</span>
+      <span class="letter" style="--i: 9;">O</span>
+    </h1>
+    
+    <p class="title">INFORMATIKA</p>
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/jeyminhoo" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://dribbble.com/jeyminhoo" target="_blank" class="social-link" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+      <a href="https://github.com/jeyminhoo" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/jeyminhoo" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/jeyminhoo" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="cta">
+      <button class="cta-button" id="openPopupButton" aria-label="Buka Popup">Jangan</button>
+      <button class="cta-button outline" id="openPopupButton" aria-label="Buka Popup">Di Klik</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close-btn" aria-label="Tutup Popup">&times;</span>
+      <h2>Info</h2>
+      <p class="typewriter"><STrong>Nama:</STrong> Jeyminhoo</p>
+      <p class="typewriter"><STrong>Pekerjaan:</STrong> Entalah</p>
+      <p class="typewriter">
+        <strong>Proses:</strong> 
+        <i class="fab fa-html5"></i> HTML, 
+        <i class="fab fa-css3-alt"></i> CSS, 
+        <i class="fab fa-js"></i> JavaScript, 
+        <i class="fab fa-react"></i> React
+    </p>
+    
+    </div>
+  </div>
+
+  
+
+  <script src="script.js"></script>
+
+  <!-- Inisialisasi particles.js -->
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#00FFFF"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 1,
+            "opacity_min": 0.1
+          }
+        },
+        "size": {
+          "value": 5,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 40,
+            "size_min": 0.1
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#00FFFF",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>

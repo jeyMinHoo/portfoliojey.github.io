@@ -1,0 +1,493 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(45deg, #121212, #2c3e50);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: backgroundAnimation 20s linear infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% { background: #121212; }
+  50% { background: #2c3e50; }
+  100% { background: #121212; }
+}
+
+/* Latar Belakang Partikel */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(0, 255, 255, 0.7);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: moveParticles 5s infinite linear;
+}
+
+/* Animasi pergerakan partikel */
+@keyframes moveParticles {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(100vw * 2), calc(100vh * 2));
+  }
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Pop-up Styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.popup-content {
+  background: #333;
+  padding: 50px;
+  border-radius: 25px;
+  width: 70%;
+  max-width: 750px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 255, 255, 0.5);
+  opacity: 0;
+  transform: scale(0);
+  animation: popupAnimation 0.7s ease-out forwards;
+}
+
+.popup-content h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  animation: fadeInText 1.5s ease-out;
+}
+
+.popup-content p {
+  font-size: 22px;
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInText 2s ease-out forwards, typing 3s steps(40) 1s normal forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #00ffff;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes popupAnimation {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+/* Adjusting Profile Content */
+.profile-container {
+  position: relative;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.social-links {
+  margin-top: 30px;
+  animation: fadeInUp 1.2s ease-out 0.4s;
+}
+
+/* Button Animation */
+.cta-button {
+  font-size: 16px;
+  color: #121212;
+  background: #00ffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 6px 25px rgba(0, 255, 255, 0.4);
+  transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.1) rotate(3deg);
+  background: linear-gradient(145deg, #00c3c3, #00ffff);
+  box-shadow: 0px 10px 40px rgba(0, 255, 255, 0.7);
+}
+
+
+/* Portfolio Card */
+.portfolio-card {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(145deg, #1c1c1c, #252525);
+  border-radius: 25px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.8);
+  padding: 60px 40px;
+  width: 420px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.portfolio-card:hover {
+  transform: perspective(1200px) rotateY(20deg) translateY(-10px);
+  box-shadow: 0px 25px 60px rgba(0, 255, 255, 0.7);
+}
+
+.profile-container {
+  position: relative;
+}
+
+/* Profile Picture Styling */
+.profile-picture {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  box-shadow: 0px 6px 30px rgba(0, 255, 255, 0.5);
+  background: linear-gradient(135deg, #00ffff, #004dff);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-picture:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0px 12px 60px rgba(0, 255, 255, 0.8);
+  background: linear-gradient(135deg, #004dff, #ff00ff);
+}
+
+/* Glow Circle Effect */
+.glow-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.6), transparent);
+  transform: translate(-50%, -50%);
+  animation: pulse 2.5s infinite ease-out;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Additional Sparkle Effect */
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #fff, transparent);
+  border-radius: 50%;
+  animation: sparkle-animation 1.5s infinite;
+}
+
+.sparkle:nth-child(1) {
+  top: 20%;
+  left: 30%;
+  animation-delay: 0s;
+}
+
+.sparkle:nth-child(2) {
+  top: 70%;
+  left: 50%;
+  animation-delay: 0.5s;
+}
+
+.sparkle:nth-child(3) {
+  top: 40%;
+  left: 80%;
+  animation-delay: 1s;
+}
+
+@keyframes sparkle-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+
+/* Social Links */
+.social-links {
+  margin-top: 30px;
+}
+
+.social-link {
+  font-size: 28px;
+  color: #b3b3b3;
+  margin: 0 15px;
+  transition: transform 0.3s, color 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.4) rotate(15deg);
+  color: #00ffff;
+}
+
+/* Buttons */
+.cta-button {
+  font-size: 16px;
+  color: #121212;
+  background: #00ffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 6px 25px rgba(0, 255, 255, 0.4);
+  transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.1) rotate(3deg);
+  background: linear-gradient(145deg, #00c3c3, #00ffff);
+  box-shadow: 0px 10px 40px rgba(0, 255, 255, 0.7);
+}
+
+.cta-button.outline {
+  color: #00ffff;
+  background: transparent;
+  border: 2px solid #00ffff;
+}
+
+.cta-button.outline:hover {
+  background: #00ffff;
+  color: #121212;
+}
+
+/* Responsif - Media Queries */
+@media (max-width: 768px) {
+  .portfolio-card {
+    width: 90%;
+    padding: 40px 20px;
+  }
+}
+
+/* Animasi untuk setiap huruf */
+.name {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: animateLetter 1.5s ease-in-out forwards, glowEffect 2s infinite alternate;
+  animation-delay: calc(0.1s * var(--i)); /* Menunda animasi tiap huruf */
+  color: #00FFFF;
+}
+
+/* Animasi muncul huruf */
+@keyframes animateLetter {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efek glow (cahaya berpendar) yang berulang */
+@keyframes glowEffect {
+  0% {
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+    transform: scale(1);
+    color: #00FFFF;
+  }
+  50% {
+    text-shadow: 0 0 20px #FF6347, 0 0 30px #FF6347, 0 0 40px #FF6347;
+    transform: scale(1.1);
+    color: #FF6347;
+  }
+  100% {
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+    transform: scale(1);
+    color: #00FFFF;
+  }
+}
+
+/* Hover effect tambahan */
+.name .letter:hover {
+  color: #FF6347;
+  text-shadow: 0 0 20px #FF6347, 0 0 30px #FF6347, 0 0 40px #FF6347;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(135deg, #1d1d1d, #333);
+  color: #ffffff;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  animation: backgroundPulse 6s infinite alternate;
+}
+
+@keyframes backgroundPulse {
+  0% {
+    background: linear-gradient(135deg, #1d1d1d, #333);
+  }
+  50% {
+    background: linear-gradient(135deg, #333, #444);
+  }
+  100% {
+    background: linear-gradient(135deg, #1d1d1d, #333);
+  }
+}
+
+.typewriter {
+  font-size: 1.5em;
+  overflow: hidden;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  margin: 10px auto;
+  letter-spacing: 2px;
+  animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.75));
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+/* Tambahan animasi estetik */
+.typewriter:hover {
+  color: #ff6f61;
+  animation: typingHover 3.5s steps(40, end), blinkHover 0.75s step-end infinite;
+  filter: drop-shadow(0px 0px 10px rgba(255, 111, 97, 0.75));
+}
+
+@keyframes typingHover {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkHover {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 111, 97, 0.75);
+  }
+}
